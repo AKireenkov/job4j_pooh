@@ -15,12 +15,9 @@ public class TopicService implements Service {
         String httpRequestType = req.httpRequestType();
         String sourceName = req.getSourceName();
         String subscriber = req.getParam();
-
         Optional<ConcurrentHashMap<String, ConcurrentLinkedQueue<String>>> topic;
-
         Optional<ConcurrentLinkedQueue<String>> subscriberQueue;
         ConcurrentLinkedQueue<String> concurrentLinkedQueue;
-
         if (GET.equals(httpRequestType)) {
             topic = Optional.ofNullable(topics.get(sourceName));
             String text;

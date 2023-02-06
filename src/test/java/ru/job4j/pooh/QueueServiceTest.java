@@ -1,14 +1,14 @@
 package ru.job4j.pooh;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class QueueServiceTest {
+class QueueServiceTest {
 
     @Test
-    public void whenPostThenGetQueue() {
+    void whenPostThenGetQueue() {
         QueueService queueService = new QueueService();
         String paramForPostMethod = "temperature=18";
         queueService.process(
@@ -21,7 +21,7 @@ public class QueueServiceTest {
     }
 
     @Test
-    public void whenQueueEmptyThenGet() {
+    void whenQueueEmptyThenGet() {
         QueueService queueService = new QueueService();
         Resp result = queueService.process(
                 new Req("GET", "queue", "weather", null)
@@ -31,7 +31,7 @@ public class QueueServiceTest {
     }
 
     @Test
-    public void whenPostInDifferentQueueThenGet() {
+    void whenPostInDifferentQueueThenGet() {
         QueueService queueService = new QueueService();
         String paramForFirstPostMethod = "java";
         String paramForSecondPostMethod = "temperature=18";
@@ -55,7 +55,7 @@ public class QueueServiceTest {
     }
 
     @Test
-    public void whenPostTwoElementsInOneQueue() {
+    void whenPostTwoElementsInOneQueue() {
         QueueService queueService = new QueueService();
         String paramForFirstPostMethod = "temperature=20";
         String paramForSecondPostMethod = "temperature=18";

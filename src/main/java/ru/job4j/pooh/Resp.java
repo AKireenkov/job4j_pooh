@@ -13,7 +13,6 @@ public class Resp {
         this.status = status;
     }
 
-
     public String text() {
         return text;
     }

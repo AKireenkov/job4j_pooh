@@ -1,13 +1,13 @@
 package ru.job4j.pooh;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class ReqTest {
+class ReqTest {
     @Test
-    public void whenQueueModePostMethod() {
+    void whenQueueModePostMethod() {
         String ls = System.lineSeparator();
         String content = "POST /queue/weather HTTP/1.1" + ls +
                 "Host: localhost:9000" + ls +
@@ -25,7 +25,7 @@ public class ReqTest {
     }
 
     @Test
-    public void whenQueueModeGetMethod() {
+    void whenQueueModeGetMethod() {
         String ls = System.lineSeparator();
         String content = "GET /queue/weather HTTP/1.1" + ls
                 + "Host: localhost:9000" + ls
@@ -39,7 +39,7 @@ public class ReqTest {
     }
 
     @Test
-    public void whenTopicModePostMethod() {
+    void whenTopicModePostMethod() {
         String ls = System.lineSeparator();
         String content = "POST /topic/weather HTTP/1.1" + ls +
                 "Host: localhost:9000" + ls +
@@ -57,7 +57,7 @@ public class ReqTest {
     }
 
     @Test
-    public void whenTopicModeGetMethod() {
+    void whenTopicModeGetMethod() {
         String ls = System.lineSeparator();
         String content = "GET /topic/weather/client407 HTTP/1.1" + ls
                 + "Host: localhost:9000" + ls
