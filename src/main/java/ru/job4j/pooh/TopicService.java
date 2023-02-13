@@ -4,7 +4,10 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import static ru.job4j.pooh.Resp.*;
+import static ru.job4j.pooh.Req.GET;
+import static ru.job4j.pooh.Req.POST;
+import static ru.job4j.pooh.Resp.STATUS_200;
+import static ru.job4j.pooh.Resp.STATUS_204;
 
 public class TopicService implements Service {
     private final ConcurrentHashMap<String, ConcurrentHashMap<String, ConcurrentLinkedQueue<String>>> topics = new ConcurrentHashMap<>();

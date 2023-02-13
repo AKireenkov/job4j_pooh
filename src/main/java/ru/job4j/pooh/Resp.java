@@ -1,8 +1,6 @@
 package ru.job4j.pooh;
 
 public class Resp {
-    public static final String GET = "GET";
-    public static final String POST = "POST";
     public static final String STATUS_200 = "200";
     public static final String STATUS_204 = "204";
     private final String text;
